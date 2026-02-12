@@ -1,5 +1,6 @@
 # Authored by Hilary Utaegbulam
 
+"""Training loops: run_epoch_dense and run_epoch_multi with DDP support."""
 from __future__ import annotations
 import math
 import numpy as np
