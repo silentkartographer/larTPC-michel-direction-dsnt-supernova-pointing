@@ -50,9 +50,14 @@ WIRE_PITCH_U_CM = 0.4669
 WIRE_PITCH_V_CM = 0.4669
 WIRE_PITCH_Z_CM = 0.4792
 
-WIRE_ANGLE_U_DEG = -35.71
-WIRE_ANGLE_V_DEG = 35.71
-WIRE_ANGLE_Z_DEG = 0.0
+THETA_DEG = {
+    'Z':  0.0,
+    'U': +35.71,
+    'V': -35.71,
+}
 
 VBULK   = 1.60e-4   # cm/ns
 T_TICK  = 500.0     # ns per tick
+PITCH_Z = 0.479     # cm per wire
+PITCH_U = 0.4667
+PITCH_V = 0.4667
