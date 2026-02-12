@@ -725,7 +725,7 @@ def build_parser():
                     help='Automatic mixed precision')
 
     # Augmentation & normalization
-    p.add_argument('--augment', type=str2bool, default=True)
+    p.add_argument('--augment', type=str2bool, default=False)
     p.add_argument('--zscore_norm', type=str2bool, default=False)
 
     # Vector heads
