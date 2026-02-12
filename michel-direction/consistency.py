@@ -7,12 +7,7 @@ import torch.nn.functional as F
 import numpy as np
 from typing import Dict, Optional
 
-from constants import (
-    Config,
-    WIRE_ANGLE_U_DEG, WIRE_ANGLE_V_DEG, WIRE_ANGLE_Z_DEG,
-    WIRE_PITCH_U_CM, WIRE_PITCH_V_CM, WIRE_PITCH_Z_CM,
-    DRIFT_CM_PER_TICK,
-)
+from constants import *
 
 def method_a_tick_sign_majority_batch(
     ux_img: dict,  # {'U': [B], 'V': [B], 'Z': [B]} - x-components (tick direction)
