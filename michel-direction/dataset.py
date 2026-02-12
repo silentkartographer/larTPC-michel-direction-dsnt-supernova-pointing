@@ -17,7 +17,7 @@ from torch.utils.data.distributed import DistributedSampler
 from typing import Tuple, Optional, Dict, List
 
 from constants import (
-    Config, PARTITION_SEED, PARTITION_FRAC, IGNORE_INDEX,
+    Config, PARTITION_SEED, PARTITION_FRAC, TRAIN_FRACTION, IGNORE_INDEX,
     PDG_ELECTRON_POS, PDG_ELECTRON_NEG, PDG_MUON_POS, PDG_MUON_NEG,
     PDG_MICHEL, PDG_BREMS,
     CLASS_BG, CLASS_ELECTRON, CLASS_MUON, CLASS_MICHEL, CLASS_BREMS,
