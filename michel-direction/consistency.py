@@ -2,6 +2,7 @@
 
 """Cross-view consistency: Methods A & B, 3D reconstruction, geometric validation."""
 from __future__ import annotations
+import math
 import torch
 import torch.nn.functional as F
 import numpy as np
