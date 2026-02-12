@@ -9,11 +9,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 from typing import Tuple, Optional
 
-from constants import (
-    WIRE_ANGLE_U_DEG, WIRE_ANGLE_V_DEG, WIRE_ANGLE_Z_DEG,
-    WIRE_PITCH_U_CM, WIRE_PITCH_V_CM, WIRE_PITCH_Z_CM,
-    DRIFT_CM_PER_TICK,
-)
+from constants import *
 
 def _n_perp_from_theta_deg(theta_deg: float) -> tuple[float, float]:
     th = math.radians(theta_deg)
