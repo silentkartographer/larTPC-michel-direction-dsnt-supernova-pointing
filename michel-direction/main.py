@@ -28,6 +28,8 @@ from evaluation import (
 )
 from visualization import save_consistency_analysis_plots
 from multiprocessing import Manager
+import traceback
+import pickle
 
 def main_worker_single_view(gpu, cfg, view):
     """
@@ -445,7 +447,6 @@ def main_worker_multi_view(gpu, cfg):
 
     if rank == 0 and getattr(cfg, 'use_consistency_checks', False):
         if len(val_consistency_metrics_over_time) > 0:
-            import pickle
             metrics_file = os.path.join(cfg.out_dir, 'runs_multi', 'consistency_metrics.pkl')
             os.makedirs(os.path.dirname(metrics_file), exist_ok=True)
             
@@ -510,8 +511,6 @@ def main(cfg: Config):
             metrics_file = os.path.join(cfg.out_dir, 'runs_multi', 'consistency_metrics.pkl')
             if os.path.exists(metrics_file):
                 print("Creating A→B consistency analysis plots...")
-                
-                import pickle
                 with open(metrics_file, 'rb') as f:
                     val_consistency_metrics_over_time = pickle.load(f)
                 
@@ -644,7 +643,6 @@ def main(cfg: Config):
                 
             except Exception as e:
                 print(f"[{view}] ERROR: {e}")
-                import traceback
                 traceback.print_exc()
 
     # HEAD-TAIL DISAMBIGUATION ANALYSIS
