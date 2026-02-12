@@ -35,7 +35,6 @@ CLASS_ID_TO_NAME = {
 
 IGNORE_INDEX = 255
 
-
 # Detector geometry
 
 PARTITION_SEED = 12345
@@ -54,3 +53,6 @@ WIRE_PITCH_Z_CM = 0.4792
 WIRE_ANGLE_U_DEG = -35.71
 WIRE_ANGLE_V_DEG = 35.71
 WIRE_ANGLE_Z_DEG = 0.0
+
+VBULK   = 1.60e-4   # cm/ns
+T_TICK  = 500.0     # ns per tick
