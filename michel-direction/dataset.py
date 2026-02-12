@@ -172,6 +172,8 @@ class NpzEventDataset(Dataset):
             fnames = fnames[:keep]
         
         self.file_pairs = [(file_map[f],) for f in fnames]  # Single-element tuples
+
+        print(f"    -> NpzEventDataset initialized for split='{split}', view='{view}' with {len(self.file_pairs)} files")
         
         if len(self.file_pairs) == 0:
             raise RuntimeError(f"No NPZ files found in {preproc_dir} for view={self.view}")
