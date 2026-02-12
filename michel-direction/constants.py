@@ -39,6 +39,7 @@ IGNORE_INDEX = 255
 # Detector geometry
 
 PARTITION_SEED = 12345
+PARTITION_FRAC = 1.0
 
 # Drift / pitch / angle constants for ICEBERG geometry
 DRIFT_VELOCITY_CM_PER_US = 0.16
