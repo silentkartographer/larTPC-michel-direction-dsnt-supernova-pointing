@@ -28,6 +28,7 @@ from augmentations import (
     aug_dead_stripes, aug_random_erasing, aug_bragg_jitter,
     aug_gain_offset, aug_gaussian_noise,
 )
+import traceback
 
 def _passes_partition(filename: str, *, role: str, frac: float, seed: int) -> bool:
     h = hashlib.md5(f"{role}\n{filename}\n{seed}".encode('utf-8')).hexdigest()
@@ -454,7 +455,6 @@ class NpzEventDataset(Dataset):
 
         except Exception as e:
             print(f"ERROR loading item {idx} ({os.path.basename(path_preproc)}): {e}")
-            import traceback
             traceback.print_exc()
             return None
 
